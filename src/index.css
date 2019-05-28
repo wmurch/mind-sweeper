@@ -12,3 +12,31 @@ body {
   display: flex;
   justify-content: center;
 }
+.tdCell {
+  background-color: blue;
+  padding: 2rem;
+}
+.big {
+  padding: 2rem;
+}
+
+.medium {
+  padding: 1rem;
+}
+
+.small {
+  padding: 0.5rem;
+}
+
+.reveal {
+  background-color: white;
+}
+.flag {
+  background-image: url(./images/flag.png);
+  background-size: contain;
+}
+
+.bomb {
+  background-image: url(./images/bomb.jpg);
+  background-size: contain;
+}
