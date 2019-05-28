@@ -22,13 +22,11 @@ class Data extends Component {
     //console.log({ games })
   }
   render() {
-    return <>
-    
-    <Cells
- 
-    {this.state.games.}/>
-    </> 
-    
+    return (
+      <>
+        <Cells />
+      </>
+    )
   }
 }
 
