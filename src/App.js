@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
+import Data from './components/Data'
+
+//import mine sweeper api data
+//display page
 
 class App extends Component {
   render() {
-    return <HelloWorld />
+    return <Data />
   }
 }
-
 export default App
