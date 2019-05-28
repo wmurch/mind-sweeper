@@ -44,7 +44,7 @@ class Data extends Component {
           status: updateGame.state,
           id: updateGame.id
         })
-        console.log({ updateGame })
+        //  console.log({ updateGame })
       })
   }
   flagCell = (row, col) => {
@@ -77,6 +77,7 @@ class Data extends Component {
     }
     if (cell === '_') {
       cellValue += 'reveal'
+      //console.log(cellValue)
       return 'tdCell reveal'
     } else if (cell === 'F') {
       cellValue += 'flag'
@@ -87,6 +88,7 @@ class Data extends Component {
     } else if (+cell >= 1 && +cell <= 8) {
       cellValue += 'number'
     }
+    console.log(cellValue)
     return cellValue
   }
   //set difficulty
@@ -151,5 +153,4 @@ class Data extends Component {
     )
   }
 }
-
 export default Data
