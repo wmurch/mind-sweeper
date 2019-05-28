@@ -44,6 +44,7 @@ class Data extends Component {
           status: updateGame.state,
           id: updateGame.id
         })
+        console.log({ updateGame })
       })
   }
   flagCell = (row, col) => {
@@ -63,7 +64,6 @@ class Data extends Component {
           status: updateGame.state,
           id: updateGame.id
         })
-        //  console.log({ updateGame })
       })
   }
   operateCell = cell => {
@@ -96,16 +96,22 @@ class Data extends Component {
       {
         difficulty: +event.target.value
       },
-      fetch('https://minesweeper-api.herokuapp.com/games', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ difficulty: +this.state.difficulty })
-      }).then(response => {
-        return response.json().then(game => {
-          this.setState({ games: game.board, status: game.state, id: game.id })
-          //  console.log({ game })
+      () => {
+        fetch('https://minesweeper-api.herokuapp.com/games', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ difficulty: +this.state.difficulty })
+        }).then(response => {
+          return response.json().then(game => {
+            this.setState({
+              games: game.board,
+              status: game.state,
+              id: game.id
+            })
+            //  console.log({ game })
+          })
         })
-      })
+      }
     )
   }
   //flag certain buttons

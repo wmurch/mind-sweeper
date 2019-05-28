@@ -12,6 +12,10 @@ body {
   display: flex;
   justify-content: center;
 }
+td {
+  padding: 2rem;
+  background-color: red;
+}
 .tdCell {
   background-color: blue;
   padding: 2rem;
